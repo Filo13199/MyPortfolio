@@ -36,3 +36,13 @@ app.get('/home',function(req,res){
 
 })
 
+
+app.get('/projects',function(req,res){
+    sess=req.session
+    res.render('projects.ejs')
+})
+
+app.get('/test',function(req,res){
+    sess=req.session
+    res.render('test.ejs')
+})
