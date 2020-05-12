@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style>
 body {text-decoration: none;  font-family: "Lato", sans-serif}
 .mySlides {background-color: black;}
@@ -24,15 +25,49 @@ body {text-decoration: none;  font-family: "Lato", sans-serif}
     background-color: black;
     background-blend-mode: lighten;
 }
-Projects{
-    height: 300px;
-    width: 60%;
+.w3-half{
+  display: block;
+  
 }
 @media only screen and (min-width: 600px) {
   body {
     float: none;
     width: 100%;
   }
+}
+.projects{
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: 50px;
+  grid-template-areas: 
+    
+    ". . x x x x f"
+    ". . a a a a f"
+    ". . a a a a f"
+    ". . c c c c f"
+    ". . c c c c f";
+    padding-right: 2mm;
+  align-items: start;
+}
+.proj1{
+  grid-area: a;
+  
+}
+.proj2{
+  grid-area: c;
+
+}
+.projTitle{
+  grid-area: x;
+}
+
+p{
+  margin: 0;
+  word-spacing: 2px;
+}
+w3-half{
+  position:relative;
+  
 }
 </style>
 <body>
@@ -48,58 +83,72 @@ Projects{
 
     
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-show-small"> Contact</a>
-   
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
+   </div>
   
 </div>
 
 </div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:1000px;margin-top:46px">
+<div class="w3-content" style="max-width:100%;margin-top:46px height: 33%;">
 
-  <!-- Automatic Slideshow Images -->
 
   <!-- About me -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
-    <h2 class="w3-wide">About Me !</h2>
-    <div class="w3-third w3-margin-bottom" title="Sorry about the low res img">
-        <img src="Filo.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:60%" id="about">
+    <h2 class="w3-wide">About Me!</h2>
+    <br>
+    <div class="w3-half" title="Sorry about the low res img">
+        <img src="Filo.jpeg" alt="New York" style="position:relative; width: 80%;"  class="w3-hover-opacity">
 
     </div>
-    <p class="w3-opacity"><i>21 years old </i></p>
-    <p class="w3-justify">My Name is Philopateer, I'm a Computer Science engineering student. I have many hobbies , one of them is playing football , another one is reading , and many other things.</p>
-    <p class="w3-justify"></p>
+
     <br>
     <br>
+    <br>
+   
+ 
+    <br>
+    <div class=w3-half>
+      <div>
+        <p class="w3-opacity"><i>21 years old </i></p>
+      
+      </div>
+      <div> <p class="w3-justify  "><i>My Name is Philopateer, I'm a Computer Science engineering student.<br> I have many hobbies , one of them is playing football , another one is reading ,Spending time with my dog.</i></p>
+   
+      </div>
+     
+    </div>
 
 
   </div>
+<br>
+<br>
 
   <!--Projects Section -->
-  <div class="Projects" id="projects" style="max-width: width 300px;">
-    <div  class="w3-container w3-content w3-padding-12" style="max-width:300px">
-      <h2 class="w3-wide w3-center">Projects</h2>
+  <div class="projects w3-container w3-content w3-center w3-padding-64" id="projects" style="max-width: 60%;">
+   
+     <div class="projTitle">
+      <h2 class="w3-wide w3-center" style="float: none;display: block;">Projects</h2>
 
-      <ul class="w3-ul w3-white " style="max-width: 300px;">
 
-        <li class="w3-padding" style="max-width: 300px;"><a style="text-decoration: none;" href="/home"> Personalized Movie database </a><span class="w3-badge "></span></li>
+
+     </div> 
+      
+        <div class="proj1" ><a type="button" class="btn btn-default btn-lg active" style="text-decoration: none;" href="/home"> Personalized Movie database </a><span class="w3-badge "></span></div>
          
               
-            </ul><br>
-            <br>
-            <ul class="w3-ul  w3-white ">
+        
+          
+        <div class="proj2" ><a type="button" class="btn btn-default btn-lg active"  href="/home"> Personalized Movie database </a><span class="w3-badge"></span></div>
+  
 
-        <li class="w3-padding">Project 2 <span class="w3-badge w3-right w3-margin-right"></span></li>
-            </ul>
-
-    </div>
   </div>
 
- 
+  <br>
+  <br>
+  <br>
+  <br>
 
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px; height: 400px;" id="contact">
