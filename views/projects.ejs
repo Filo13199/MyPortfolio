@@ -27,7 +27,7 @@
   font-family: "Allerta Stencil", Sans-serif;
 }
 body {text-decoration: none;  font-family: "Lato", sans-serif}
-.mySlides {background-color: black;}
+
 .w3-bar-item{
     position: relative;
 }
@@ -173,24 +173,39 @@ w3-half{
   position:relative;
   
 }
+#night{
+
+  background-position: left top;
+  border-radius: 25px;
+  border: 2px solid midnightblue;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+
+
 .myFont{
     font-family: "Comic Sans MS", cursive, sans-serif;}
 </style>
-<body>
+<body style="background-color: lightgoldenrodyellow;">
 
-    <div class="w3-top" id="topbuttons">
-              <div class="w3-bar-block w3-black w3-card">
+    <div class="w3-top" >
+              <div class="w3-bar-block  w3-card" id="About" style="background-color:black;">
+                <a href="home#about" class="w3-bar-item w3-button w3-padding-large w3-show-x" style="color: white;">About</a>
+                </div>
+
+                <div class="w3-bar-block w3-card" id="Projects" style="background-color:black;">
         
-    
-        <a href="home#about" class="w3-bar-item w3-button w3-padding-large w3-show-x w3-black">About</a>
-        <a href="home#projects" class="w3-bar-item w3-button w3-padding-large w3-black" >Projects</a>
-    
+           <a href="home#projects" class="w3-bar-item w3-button w3-padding-large" style="color: white;">Projects</a>
+                </div>
+           <div class="w3-bar-block w3-card" id="Contact" style="background-color:black;">
         
-        <a href="home#contact" class="w3-bar-item w3-button w3-padding-large w3-show-small w3-black"> Contact</a>
-  
+            
+        <a href="home#contact" class="w3-bar-item w3-button w3-padding-large w3-show-small"  style="color: white;"> Contact</a>
+            
        </div>
-       <div class="w3-bar-block w3-flat-midnight-blue w3-left" style="outline-color: royalblue;">
-        <h2 class="w3-xlarge">Dark mode</h2>
+       <div id="night" class="w3-bar-block  w3-left" style="outline-color: royalblue;">
+        <h2  id="dark" class="w3-xlarge">Dark mode</h2>
         <label class="switch">
          <input type="checkbox" id="toggleSwitch">
          <span class="slider round"></span>
@@ -223,12 +238,10 @@ w3-half{
     <br>
     <br>
     <br>
-   
- 
     <br>
     <div style="position: relative;left:20%; max-width: 90%;">
       <div>
-        <p class="w3-opacity" style="position: relative; left:-20%"><i>Description </i></p>
+        <p class="w3-opacity" style="position: relative; left:-17%"><i >Description </i></p>
       
       </div>
       <div > <p class="w3-justify" >
@@ -239,7 +252,7 @@ w3-half{
 
 
       </p>
-      <a href="https://filo-mileston2.herokuapp.com/login" style="text-decoration: underline;"> Try it now !</a>
+      <a href="https://filo-mileston2.herokuapp.com/login" style="text-decoration: underline;position: relative;left:-15% ;"> Try it now !</a>
    
       </div>
      
@@ -251,23 +264,38 @@ w3-half{
 <br>
 
   <!--Projects Section -->
-  <div class="projects w3-container w3-content w3-center w3-padding-64" id="projects" style="max-width: 60%;">
-   
-     <div class="projTitle">
-      <h2 class="w3-wide w3-center" style="float: none;display: block;">Projects</h2>
+  <div class="w3-container w3-content w3-center w3-padding-64" id="projects" style="max-width: 60%;">
+    <h2 class="w3-wide">Java database management system</h2>
 
+    <div class="w3-half" title="DBMS" style="position: relative;left: 25%;">
+      <img src="DBMS.png" alt="DBMS" style="position:relative; width: 80%;"  class="w3-hover-opacity">
 
+  </div>
 
-     </div> 
-      
-        <div class="proj1" ><a class="btn btn-default btn-lg" style="text-decoration: none;" href="/projects"> Personalized Movie database </a><span class="w3-badge "></span></div>
+  <br>
+  <br>
+
+  <br>
+
+  <br>
+  <br>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+        <div style="position: relative;left: 0%;">
+          <a href="https://github.com/Filo13199/DBMS_Java"> Download the project files now !</a>
          
+
+
+        </div>
               
         
           
-        <div class="proj2" ><a  class="btn btn-default btn-lg"  href="/projects"> Personalized Movie database </a><span class="w3-badge"></span></div>
-  
-
   </div>
 
   <br>
@@ -288,15 +316,12 @@ w3-half{
         <i class="fa fa-phone" style="width:30px"></i> Phone: +01147299224 <br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: filo.ict@gmail.com<br>
       </div>
-      <div class="w3-col m6">
+      <div class="w3-col m6"  >
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
+            <div id="email">
          
-                <br>
-                <a href="mailto:filo.ict@gmail.com"
-
-                    class="w3-button w3-black w3-section w3-right" >Send me an E-mail !
-                 </a>
+                
+                <a href="mailto:filo.ict@gmail.com" class="w3-button w3-black w3-section w3-right" >Send me an E-mail !</a>
             </div>
           </div>
 
@@ -323,13 +348,25 @@ let y = x.children;
       let color = document.body.style.background;
       for(let i =0;i<y.length;i++){
         if (color === 'black') {
-        document.body.style.background = "#FFFFFF";
+        document.body.style.background = "lightgoldenrodyellow";
         y[i].style.color="black";
         y[i].className
+        document.getElementById("About").style.backgroundColor="black";
+        document.getElementById("Contact").style.backgroundColor="black";
+        document.getElementById("Projects").style.backgroundColor="black";
+
+        document.getElementById("email").style.backgroundColor="black";
+        document.getElementById("dark").style.color="black";
       } 
       else {
         document.body.style.background = "black";
     y[i].style.color="blue";
+    document.getElementById("About").style.backgroundColor="blue";
+
+    document.getElementById("Contact").style.backgroundColor="blue";
+    document.getElementById("Projects").style.backgroundColor="blue";
+    document.getElementById("email").style.backgroundColor="blue";
+    document.getElementById("dark").style.color="blue";
 
         
 
