@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>Home</title>
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<link rel="stylesheet" href="bootstrap2-toggle.css">
+<link rel="stylesheet" href="bootstrap2-toggle.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.js" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.css"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.css"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <style>
 body {text-decoration: none;  font-family: "Lato", sans-serif}
 .mySlides {background-color: black;}
@@ -22,7 +39,7 @@ body {text-decoration: none;  font-family: "Lato", sans-serif}
 .w3-bar-block{
     position: relative;
     float:right;
-    background-color: black;
+
     background-blend-mode: lighten;
 }
 .w3-half{
@@ -34,6 +51,69 @@ body {text-decoration: none;  font-family: "Lato", sans-serif}
     float: none;
     width: 100%;
   }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 .projects{
   display: grid;
@@ -68,23 +148,75 @@ w3-half{
   position:relative;
   
 }
+.mygrid{
+ display: grid;
+  grid-auto-rows: 50px;
+
+  grid-template-areas: 
+    
+    "a a a"
+    "b b b"
+    "c c c";
+    padding-right: 0mm;
+  align-items: start;
+}
+#Contact{
+  grid-area: c;
+
+  
+}
+
+#About{
+  grid-area: a;
+ 
+}
+#Projects{
+  grid-area: b;
+}
+
+#night{
+
+background-position: left top;
+border-radius: 25px;
+border: 2px solid midnightblue;
+padding: 20px; 
+
+}
 </style>
-<body>
+<body style="background-color: lightgoldenrodyellow;">
 
 <!-- Navbar -->
+<div id="page">
 <div class="w3-top w3-black">
     <div class="w3-black" >
-          <div class="w3-bar-block w3-black w3-card">
-    
+      <div class="mygrid w3-right">
+        <div class="w3-bar-block  w3-card" id="About" style="display: block; background-color:black;">
+        <a href="home#about" class="w3-bar-item w3-button w3-padding-large w3-show-x" style="color: white;">About</a>
+        </div>
+        <div class="w3-bar-block w3-card" id="Projects" style="display: block; background-color:black;">
+      
+          <a href="home#projects" class="w3-bar-item w3-button w3-padding-large" style="color: white;">Projects</a>
+               </div>
 
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-show-small">About</a>
-    <a href="#projects" class="w3-bar-item w3-button w3-padding-large">Projects</a>
+               <div class="w3-bar-block w3-card" id="Contact" style=" background-color:black;">
+      
+          
+                <a href="home#contact" class="w3-bar-item w3-button w3-padding-large w3-show-small"  style="color: white;"> Contact</a>
+                    
+               </div>
 
-    
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-show-small"> Contact</a>
-   </div>
+      </div>
   
 </div>
+        
+<div id="night" class="w3-bar-block w3-left" style="outline-color: royalblue;">
+  <h2  id="dark" class="w3-xlarge" style="color: black;">Dark mode</h2>
+  <label class="switch">
+   <input type="checkbox" id="toggleSwitch">
+   <span class="slider round"></span>
+ </label>
+
+ </div>
 
 </div>
 
@@ -134,12 +266,12 @@ w3-half{
 
      </div> 
       
-        <div class="proj1" ><a type="button" class="btn btn-default btn-lg" style="text-decoration: none;" href="/projects"> Personalized Movie database </a><span class="w3-badge "></span></div>
+        <div class="proj1" ><a type="button" class="btn btn-default btn-lg" style="text-decoration: none;" href="projects#movie"> Personalized Movie database </a><span class="w3-badge "></span></div>
          
               
         
           
-        <div class="proj2" ><a type="button" class="btn btn-default btn-lg"  href="/projects"> Personalized Movie database </a><span class="w3-badge"></span></div>
+        <div class="proj2" ><a type="button" class="btn btn-default btn-lg"  href="projects#dbms"> Database management system </a><span class="w3-badge"></span></div>
   
 
   </div>
@@ -150,27 +282,25 @@ w3-half{
   <br>
 
   <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px; height: 400px;" id="contact">
+   <!-- The Contact Section -->
+   <div class="w3-container w3-content w3-padding-64" style="max-width:800px; height: 400px;" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
 
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
-        <a href="https://www.facebook.com/filo.youhanna18" style="padding-right: 3%;" rel="alternate" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity" ></i></a>
+        <a href="https://www.facebook.com/filo.youhanna18" style= "size: 5px 5px; padding-right: 3%;" rel="alternate" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity" ></i></a>
         <a href="https://twitter.com/Filo_youhanna"><i class="fa fa-twitter w3-hover-opacity"></i></a> 
         <br>
         <i class="fa fa-map-marker" style="width:30px"></i> Egypt, Cairo<br>
         <i class="fa fa-phone" style="width:30px"></i> Phone: +01147299224 <br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: filo.ict@gmail.com<br>
       </div>
-      <div class="w3-col m6">
+      <div class="w3-col m6"  >
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
+            <div id="email" style="background-color: black;">
          
-                <br>
-                <a href="mailto:filo.ict@gmail.com">
-
-                    <button class="w3-button w3-black w3-section w3-right" type="submit">Send me an E-mail !</button>
-                 </a>
+                
+                <a href="mailto:filo.ict@gmail.com" class="w3-button w3-section w3-right" id="emaillink" style="color: white;" >Send me an E-mail !</a>
             </div>
           </div>
 
@@ -181,13 +311,14 @@ w3-half{
   
 <!-- End Page Content -->
 </div>
-
+</div>
 
 
 
 <script>
   let x = document.getElementById("page");
 let y = x.children;
+
   document.getElementById("toggleSwitch").onclick = function() {
     myFunction()
   };
@@ -196,11 +327,34 @@ let y = x.children;
     let color = document.body.style.background;
     for(let i =0;i<y.length;i++){
       if (color === 'black') {
-      document.body.style.background = "#FFFFFF";
+      document.body.style.background = "lightgoldenrodyellow";
       y[i].style.color="black";
-    } else {
+      y[i].className
+      document.getElementById("About").style.backgroundColor="black";
+      document.getElementById("Contact").style.backgroundColor="black";
+      document.getElementById("Projects").style.backgroundColor="black";
+        document.getElementById("emaillink").style.color="white";
+      document.getElementById("email").style.backgroundColor="black";
+      document.getElementById("dark").style.color="black";
+      document.getElementById("dark").style.backgroundColor="transparent";
+
+    } 
+    else {
       document.body.style.background = "black";
-      y[i].style.color="blue";
+  y[i].style.color="blue";
+  document.getElementById("About").style.backgroundColor="blue";
+
+  document.getElementById("Contact").style.backgroundColor="blue";
+  document.getElementById("Projects").style.backgroundColor="blue";
+  document.getElementById("email").style.backgroundColor="blue";
+  document.getElementById("emaillink").style.color="black";
+  document.getElementById("dark").style.backgroundColor="transparent";
+
+  document.getElementById("dark").style.color="blue";
+
+      
+
+
 
 
     }
@@ -209,6 +363,7 @@ let y = x.children;
 
   }
 </script>
+
 
 </body>
 </html>

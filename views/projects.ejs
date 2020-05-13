@@ -89,6 +89,7 @@ body {text-decoration: none;  font-family: "Lato", sans-serif}
     padding-right: 2mm;
   align-items: start;
 }
+
 .proj1{
   grid-area: a;
   
@@ -179,39 +180,80 @@ w3-half{
   border-radius: 25px;
   border: 2px solid midnightblue;
   padding: 20px; 
-  width: 200px;
-  height: 150px;  
+
+}
+.mygrid{
+ display: grid;
+  grid-auto-rows: 50px;
+
+  grid-template-areas: 
+    
+    "a a a"
+    "b b b"
+    "c c c";
+    padding-right: 0mm;
+  align-items: start;
+}
+#Contact{
+  grid-area: c;
+
+  
 }
 
+#About{
+  grid-area: a;
+ 
+}
+#Projects{
+  grid-area: b;
+}
 
 .myFont{
     font-family: "Comic Sans MS", cursive, sans-serif;}
 </style>
 <body style="background-color: lightgoldenrodyellow;">
 
-    <div class="w3-top" >
-              <div class="w3-bar-block  w3-card" id="About" style="background-color:black;">
-                <a href="home#about" class="w3-bar-item w3-button w3-padding-large w3-show-x" style="color: white;">About</a>
-                </div>
+    <div class="w3-top w3-third w3-right" >
+      <div class="mygrid w3-right">
+          <div class="w3-bar-block  w3-card" id="About" style="display: block; background-color:black;">
+          <a href="home#about" class="w3-bar-item w3-button w3-padding-large w3-show-x" style="color: white;">About</a>
+          </div>
+          <div class="w3-bar-block w3-card" id="Projects" style="display: block; background-color:black;">
+        
+            <a href="home#projects" class="w3-bar-item w3-button w3-padding-large" style="color: white;">Projects</a>
+                 </div>
 
-                <div class="w3-bar-block w3-card" id="Projects" style="background-color:black;">
-        
-           <a href="home#projects" class="w3-bar-item w3-button w3-padding-large" style="color: white;">Projects</a>
-                </div>
-           <div class="w3-bar-block w3-card" id="Contact" style="background-color:black;">
+                 <div class="w3-bar-block w3-card" id="Contact" style=" background-color:black;">
         
             
-        <a href="home#contact" class="w3-bar-item w3-button w3-padding-large w3-show-small"  style="color: white;"> Contact</a>
-            
-       </div>
-       <div id="night" class="w3-bar-block  w3-left" style="outline-color: royalblue;">
+                  <a href="home#contact" class="w3-bar-item w3-button w3-padding-large w3-show-small"  style="color: white;"> Contact</a>
+                      
+                 </div>
+
+        </div>
+              
+              
+         
+       <div id="night" class="w3-bar-block w3-left" style="outline-color: royalblue;">
         <h2  id="dark" class="w3-xlarge">Dark mode</h2>
         <label class="switch">
          <input type="checkbox" id="toggleSwitch">
          <span class="slider round"></span>
        </label>
     
+     
        </div>
+
+
+       <div class="w3-bar-block w3-left w3-card" id="Home" style="position: relative;left: 1%; background-color:black;">
+        
+            
+        <a href="home" class="w3-bar-item w3-button w3-padding-large w3-show-small"  style="color: white;"> Home</a>
+            
+       </div>
+
+
+
 
     </div>
 
@@ -223,7 +265,7 @@ w3-half{
    <div id="page">
 
         
-   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:60%" id="about">
+   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:60%" id="movie">
     <h2 class="w3-wide">Personalized movie database</h2>
     <br>
     <div class="w3-half" title="Sorry about the low res img">
@@ -264,7 +306,7 @@ w3-half{
 <br>
 
   <!--Projects Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" id="projects" style="max-width: 60%;">
+  <div class="w3-container w3-content w3-center w3-padding-64" id="dbms" style="max-width: 60%;">
     <h2 class="w3-wide">Java database management system</h2>
 
     <div class="w3-half" title="DBMS" style="position: relative;left: 25%;">
@@ -309,7 +351,7 @@ w3-half{
 
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
-        <a href="https://www.facebook.com/filo.youhanna18" style="padding-right: 3%;" rel="alternate" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity" ></i></a>
+        <a href="https://www.facebook.com/filo.youhanna18" style= "size: 5px 5px; padding-right: 3%;" rel="alternate" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity" ></i></a>
         <a href="https://twitter.com/Filo_youhanna"><i class="fa fa-twitter w3-hover-opacity"></i></a> 
         <br>
         <i class="fa fa-map-marker" style="width:30px"></i> Egypt, Cairo<br>
@@ -318,10 +360,10 @@ w3-half{
       </div>
       <div class="w3-col m6"  >
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div id="email">
+            <div id="email" style="background-color: black;">
          
                 
-                <a href="mailto:filo.ict@gmail.com" class="w3-button w3-black w3-section w3-right" >Send me an E-mail !</a>
+                <a href="mailto:filo.ict@gmail.com" class="w3-button w3-section w3-right" id="emaillink" style="color: white;" >Send me an E-mail !</a>
             </div>
           </div>
 
@@ -354,7 +396,9 @@ let y = x.children;
         document.getElementById("About").style.backgroundColor="black";
         document.getElementById("Contact").style.backgroundColor="black";
         document.getElementById("Projects").style.backgroundColor="black";
+        document.getElementById("Home").style.backgroundColor="black";
 
+          document.getElementById("emaillink").style.color="white";
         document.getElementById("email").style.backgroundColor="black";
         document.getElementById("dark").style.color="black";
       } 
@@ -362,10 +406,13 @@ let y = x.children;
         document.body.style.background = "black";
     y[i].style.color="blue";
     document.getElementById("About").style.backgroundColor="blue";
-
+document.getElementById("Home").style.backgroundColor="blue";
+        
     document.getElementById("Contact").style.backgroundColor="blue";
     document.getElementById("Projects").style.backgroundColor="blue";
     document.getElementById("email").style.backgroundColor="blue";
+    document.getElementById("emaillink").style.color="black";
+
     document.getElementById("dark").style.color="blue";
 
         
